@@ -1,0 +1,17 @@
+﻿
+> sandi-smal@0.0.0 lint
+> eslint .
+
+
+C:\Intel\PAGINAS_WEB\SANDI\src\context\AuthContext.tsx
+  30:31  error  'error' is assigned a value but never used                                                                                      @typescript-eslint/no-unused-vars
+  63:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Intel\PAGINAS_WEB\SANDI\src\pages\Catalog.tsx
+  20:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Intel\PAGINAS_WEB\SANDI\src\pages\ProductDetail.tsx
+  25:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Ô£û 4 problems (4 errors, 0 warnings)
+

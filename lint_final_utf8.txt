@@ -1,0 +1,14 @@
+﻿
+> sandi-smal@0.0.0 lint
+> eslint .
+
+
+C:\Intel\PAGINAS_WEB\SANDI\src\context\AuthContext.tsx
+  30:58  error  Unexpected any. Specify a different type                                                                                        @typescript-eslint/no-explicit-any
+  64:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Intel\PAGINAS_WEB\SANDI\src\pages\AdminDashboard.tsx
+  43:8  warning  React Hook useEffect has a missing dependency: 'fetchData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Ô£û 3 problems (2 errors, 1 warning)
+

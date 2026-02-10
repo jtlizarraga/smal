@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap');
+
+:root {
+  --color-cream: #FFFBFC;
+  --color-soft-pink: #F8D7DA;
+  --color-accent-pink: #D63384;
+  --color-deep-brown: #321A1D;
+  --color-blush-pink: #FCE4EC;
+
+  font-family: 'Manrope', 'Montserrat', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-deep-brown);
+  background-color: var(--color-soft-pink);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--color-deep-brown);
+}
+
+.text-elegant {
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-cream {
+  background-color: var(--color-cream);
+}
+
+.bg-soft-pink {
+  background-color: var(--color-soft-pink);
+}
+
+.border-accent-pink {
+  border-color: var(--color-accent-pink);
+}
+
+.text-accent-pink {
+  color: var(--color-accent-pink);
+}
+
+/* Custom button styles to match the bakery aesthetic */
+.btn-primary {
+  background-color: var(--color-accent-pink);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px 0 rgba(235, 174, 183, 0.39);
+}
+
+.btn-primary:hover {
+  background-color: #D896A3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(235, 174, 183, 0.3);
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-pause {
+  animation-play-state: paused;
+}
+
+.card-elegant {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(45, 27, 30, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card-elegant:hover {
+  transform: scale(1.02);
+}
