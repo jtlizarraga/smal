@@ -5,6 +5,8 @@ import { useAuth } from '../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { Trash2, Edit, Plus, Package, Image as ImageIcon, ArrowLeft } from 'lucide-react';
 
+const ADMIN_EMAILS = ['corpdatac@gmail.com'];
+
 export function AdminDashboard() {
     const { user, loading: authLoading } = useAuth();
     const navigate = useNavigate();
@@ -21,8 +23,12 @@ export function AdminDashboard() {
     const [editingProduct, setEditingProduct] = useState<Product | null>(null);
 
     useEffect(() => {
-        if (!authLoading && !user) {
-            navigate('/login');
+        if (!authLoading) {
+            if (!user) {
+                navigate('/login');
+            } else if (!ADMIN_EMAILS.includes(user.email || '')) {
+                navigate('/');
+            }
         }
     }, [user, authLoading, navigate]);
 

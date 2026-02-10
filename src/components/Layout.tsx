@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { BrandLogo } from './BrandLogo';
 
+const ADMIN_EMAILS = ['corpdatac@gmail.com'];
+
 export function Layout() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { user, signOut } = useAuth();
@@ -32,7 +34,11 @@ export function Layout() {
                             <Link to="/about" className="text-[10px] font-bold uppercase tracking-[0.2em] text-deep-brown/60 hover:text-accent-pink transition-all">Nosotros</Link>
                             <Link to="/faq" className="text-[10px] font-bold uppercase tracking-[0.2em] text-deep-brown/60 hover:text-accent-pink transition-all">FAQ</Link>
                             <Link to="/contact" className="text-[10px] font-bold uppercase tracking-[0.2em] text-deep-brown/60 hover:text-accent-pink transition-all">Contacto</Link>
-                            {user && <Link to="/admin" className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-pink font-serif italic hover:text-deep-brown transition-all">Panel Admin</Link>}
+                            {user && ADMIN_EMAILS.includes(user.email || '') && (
+                                <Link to="/admin" className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-pink font-serif italic hover:text-deep-brown transition-all">
+                                    Panel Admin
+                                </Link>
+                            )}
                         </div>
 
                         {/* Mobile Menu Button - Cart Removed */}
@@ -119,6 +125,15 @@ export function Layout() {
                             >
                                 Contacto
                             </Link>
+                            {user && ADMIN_EMAILS.includes(user.email || '') && (
+                                <Link
+                                    to="/admin"
+                                    className="block px-3 py-2 rounded-md text-base font-medium text-accent-pink hover:bg-soft-pink italic font-serif"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    Panel Admin
+                                </Link>
+                            )}
                         </div>
                     </div>
                 )}
