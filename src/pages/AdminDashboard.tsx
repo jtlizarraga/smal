@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { Trash2, Edit, Plus, Package, Image as ImageIcon, ArrowLeft } from 'lucide-react';
 
-const ADMIN_EMAILS = ['corpdatac@gmail.com'];
+const ADMIN_EMAILS = ['corpdatac@gmail.com', 'Sandylizarraga2@gmail.com'];
 
 export function AdminDashboard() {
     const { user, loading: authLoading } = useAuth();

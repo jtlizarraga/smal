@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { BrandLogo } from './BrandLogo';
 
-const ADMIN_EMAILS = ['corpdatac@gmail.com'];
+const ADMIN_EMAILS = ['corpdatac@gmail.com', 'Sandylizarraga2@gmail.com'];
 
 export function Layout() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
